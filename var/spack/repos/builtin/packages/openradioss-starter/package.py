@@ -46,8 +46,8 @@ class OpenradiossStarter(CMakePackage):
         "%aocc",
         "%arm",
         policy="one_of",
-        msg="Openradioss-starter can be built using GNU Fortran, Intel Fortran, AOCC, \
-             or Armflang compilers only.",
+        msg="Openradioss-starter can be built using GNU Fortran, Intel Fortran, AOCC, "
+        "or Armflang compilers only.",
     )
 
     build_directory = "starter"
@@ -96,10 +96,10 @@ class OpenradiossStarter(CMakePackage):
         )
         install_tree(
             join_path(self.stage.source_path, "hm_cfg_files"), join_path(prefix, "hm_cfg_files")
-        ),
+        )
         install_tree(
             join_path(self.stage.source_path, "extlib", "h3d"), join_path(prefix, "extlib", "h3d")
-        ),
+        )
         install_tree(
             join_path(self.stage.source_path, "extlib", "hm_reader"),
             join_path(prefix, "extlib", "hm_reader"),

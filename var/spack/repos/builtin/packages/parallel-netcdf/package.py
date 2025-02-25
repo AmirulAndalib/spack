@@ -4,8 +4,6 @@
 
 import os
 
-import llnl.util.tty as tty
-
 from spack.package import *
 
 
@@ -106,8 +104,8 @@ class ParallelNetcdf(AutotoolsPackage):
         if libs:
             return libs
 
-        msg = f"Unable to recursively locate {'shared' if shared else 'static'} \
-{self.spec.name} libraries in {self.spec.prefix}"
+        msg = f"Unable to recursively locate {'shared' if shared else 'static'} "
+        msg += f"{self.spec.name} libraries in {self.spec.prefix}"
         raise NoLibrariesError(msg)
 
     @when("@master")
